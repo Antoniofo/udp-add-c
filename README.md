@@ -4,7 +4,13 @@ Little program to have an UDP communication in C wich adds number in this format
 
 ## Installation
 
-You can find the bin in the release page => [here](https://github.com/antoniofo/udp-add-c/release)
+You can find the bin in the release page.
+
+[![Release]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: https://github.com/Antoniofo/ElevatorBC/releases
+<!---------------------------------[ Buttons ]--------------------------------->
+[Release]: https://img.shields.io/badge/Release-EFFDE?style=for-the-badge&logoColor=white&logo=DocuSign
 
 ## Compile
 
