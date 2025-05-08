@@ -64,7 +64,7 @@ int main() {
             }
         }
 
-        char buffer[1024];
+        char buffer[65507];
         memset(buffer, 0, sizeof(buffer));
         int recvlen = recvfrom(listenfd, buffer, sizeof(buffer), 0,
             (struct sockaddr*)&cliaddr, &client_struct_length);
