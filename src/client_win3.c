@@ -8,7 +8,7 @@ int main() {
     WSADATA wsa;
     SOCKET sockfd;
     struct sockaddr_in servaddr, cliaddr;
-    char buffer[1024] = "8";
+    char buffer[1024] = "Hello";
     int port;
 
     printf("Enter port number\n");

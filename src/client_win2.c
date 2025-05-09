@@ -8,7 +8,7 @@ int main() {
     WSADATA wsa;
     SOCKET sockfd;
     struct sockaddr_in servaddr, cliaddr;
-    char buffer[65508];
+    char buffer[65507];
     for (int i = 0; i < sizeof(buffer); i++){
         if(i % 2 == 0){
 	    buffer[i] = '2';
