@@ -37,7 +37,7 @@ int main() {
     // Setup server address structure
     servaddr.sin_family = AF_INET;
     servaddr.sin_port = htons(port);
-    servaddr.sin_addr.s_addr = inet_addr("172.22.22.90");
+    servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
 
     printf("Sending message\n");

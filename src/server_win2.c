@@ -69,12 +69,16 @@ int main() {
         int recvlen = recvfrom(listenfd, buffer, sizeof(buffer), 0,
             (struct sockaddr*)&cliaddr, &client_struct_length);
 
-        if (recvlen == SOCKET_ERROR) {
+        if (recvlen == SOCKET_ERROR) {           
             int err = WSAGetLastError();
-            if (err != WSAEWOULDBLOCK && err != WSAECONNRESET){
+            if (err != WSAEWOULDBLOCK && err!= WSAECONNRESET){
                 printf("recvfrom() failed with error code: %d\n", err);
                 break;
             }
+			if (err == WSAECONNRESET){
+				printf("ConnReset\n");
+				
+			}
         } else if (recvlen > 0) {
             //buffer[recvlen] = '\0';
             printf("Received message from IP: %s and port: %d\n",
