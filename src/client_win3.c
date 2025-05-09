@@ -42,15 +42,15 @@ int main() {
 
     printf("Sending message\n");
     for(int i = 0; i < 5; i++){ // Envoie 5 requêtes
-    // Send UDP packet
-    if (sendto(sockfd, buffer, strlen(buffer), 0,
-               (struct sockaddr*)&servaddr, sizeof(servaddr)) == SOCKET_ERROR) {
-        printf("Couldn't send. Error Code: %d\n", WSAGetLastError());
-        closesocket(sockfd);
-        WSACleanup();
-        return 1;
-    }
-    printf("Message sent\n");
+		// Send UDP packet
+		if (sendto(sockfd, buffer, strlen(buffer), 0,
+				(struct sockaddr*)&servaddr, sizeof(servaddr)) == SOCKET_ERROR) {
+			printf("Couldn't send. Error Code: %d\n", WSAGetLastError());
+			closesocket(sockfd);
+			WSACleanup();
+			return 1;
+		}
+		printf("Message sent\n");
     }
 
     closesocket(sockfd);
